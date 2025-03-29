@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary color - Vibrant red */
+  --color-primary: 219 0 50; /* rgb(219, 0, 50) - #DB0032 */
+  --color-primary-light: 227 51 89; /* rgb(227, 51, 89) - Lighter variant */
+  --color-primary-dark: 176 0 40; /* rgb(176, 0, 40) - Darker variant */
+  
+  /* Secondary color - Light grayish */
+  --color-secondary: 177 167 166; /* rgb(177, 167, 166) - #B1A7A6 */
+  --color-secondary-light: 196 188 187; /* rgb(196, 188, 187) - Lighter variant */
+  --color-secondary-dark: 150 140 139; /* rgb(150, 140, 139) - Darker variant */
+  
+  /* Accent color - Red shade */
+  --color-accent: 161 1 37; /* rgb(161, 1, 37) - #A10125 */
+  
+  /* Neutral colors - Light blue/white with updated text color */
+  --color-neutral-light: 235 242 250; /* rgb(235, 242, 250) - #EBF2FA */
+  --color-neutral: 214 228 244; /* rgb(214, 228, 244) - Slightly darker */
+  --color-neutral-dark: 131 0 30; /* rgb(131, 0, 30) - #83001E - Text color */
+  
+  /* Success, warning, error colors */
+  --color-success: 40 167 69; /* rgb(40, 167, 69) - Green */
+  --color-warning: 255 193 7; /* rgb(255, 193, 7) - Yellow */
+  --color-error: 220 53 69; /* rgb(220, 53, 69) - Red */
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-light text-neutral-dark;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold mb-4;
+  }
+  
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  p {
+    @apply mb-4;
+  }
+  
+  a {
+    @apply text-primary hover:text-primary-dark transition-colors;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-dark;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-white hover:opacity-90;
+  }
+  
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-md;
+  }
+}
